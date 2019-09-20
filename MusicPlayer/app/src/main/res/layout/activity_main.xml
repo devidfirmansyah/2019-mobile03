@@ -1,86 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF2C3E50"
-    android:orientation="vertical"
+    android:background="#202636"
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginLeft="80dp"
-        android:src="@drawable/current_song_image" />
-
-<!--    <ImageView-->
-<!--        android:id="@+id/imageView3"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:src="@drawable/menu" />-->
+        android:id="@+id/Menu"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/menu" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/currentsong"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:src="@drawable/prev_song_image" />
+        android:layout_below="@id/Menu"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/current_song_image" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/prevsong"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
-        android:layout_marginLeft="370dp"
-        android:src="@drawable/next_song_image" />
+        android:layout_height="400dp"
+        android:layout_alignParentLeft="true"
+        app:srcCompat="@drawable/prev_song_image" />
 
     <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="36dp"
-        android:layout_height="34dp" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="36dp"
-        android:layout_height="34dp" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="36dp"
-        android:layout_height="34dp" />
-
-    <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/nextsong"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="400dp"
+        android:layout_alignParentRight="true"
+        app:srcCompat="@drawable/next_song_image" />
 
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/wave"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent"
+        android:layout_below="@id/artist"
+        android:layout_marginBottom="100dp"
+        app:srcCompat="@drawable/wave" />
 
     <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/playbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jihan Audi"
-        android:textColor="#FFFFFF" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="66dp"
+        app:srcCompat="@drawable/play_button" />
 
-    <TextView
-        android:id="@+id/textView4"
+    <ImageView
+        android:id="@+id/fastforward"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sayang"
-        android:textColor="#FFFFFF" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="132dp"
+        android:layout_marginBottom="71dp"
+        app:srcCompat="@drawable/fast_forward" />
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/rewind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="132dp"
+        android:layout_marginBottom="71dp"
+        app:srcCompat="@drawable/revind" />
+
+    <ImageView
+        android:id="@+id/repeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="47dp"
+        android:layout_marginBottom="71dp"
+        app:srcCompat="@drawable/repeat" />
+
+    <ImageView
+        android:id="@+id/speaker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="47dp"
+        android:layout_marginBottom="71dp"
+        app:srcCompat="@drawable/speaker" />
+
+    <TextView
+        android:id="@+id/artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titlesong"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/lato_light"
+        android:text="Lesti"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/titlesong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/currentsong"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/lato_regular"
+        android:text="Bagai Rantai Yang Kering"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp" />
+
+</RelativeLayout>
